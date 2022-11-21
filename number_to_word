@@ -1,0 +1,14 @@
+from num2words import num2words
+
+
+def num_to_word(number, language):
+
+    num_to_english = num2words(number, lang='en')
+    num_to_portuguese = num2words(number, lang='pt-br')
+
+    if language == 'english':
+         return f'Number {number} in english: {num_to_english}.'
+    elif language == 'portuguese':
+         return f'Number {number} in portuguese: {num_to_portuguese}.'
+    else:
+        return 'Invalid language. Try english or portuguese.'
